@@ -1,0 +1,117 @@
+:root{
+    --bg-main: #000022;
+    --bg-borders: #dfb5ff;
+    --bdr-sections: #E28413;
+    --bg-sections: #FBF5F3;
+    --text-h: #C42847;
+    --text-main: #000022;
+    --bg-button: var(--bg-main);
+    --text-button: var(--bg-sections);
+}
+
+@media (prefers-color-scheme: light){
+    :root{
+        --bg-main: #000022;
+        --bg-borders: #DE3C4B;
+        --bdr-sections: #E28413;
+        --bg-sections: #FBF5F3;
+        --text-h: #C42847;
+        --text-main: #000022;
+    }
+}
+
+body{
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside-left main aside-right"
+    "footer footer footer" 
+    ;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: auto auto 2fr auto;
+    height: 100vh;
+}
+
+h1, h2, h3, h4{
+    color: var(--text-h);
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    background-color: var(--bg-borders);
+    color: var(--text-h);
+    max-height: 100px;
+    /* position: sticky;
+    z-index: 1000;
+    top: 0; */
+}
+
+nav{
+    grid-area: nav;
+    background-color: var(--bg-borders);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li{
+    background-color: var(--bg-button);    
+    color: var(--text-button);
+    padding: 1rem;
+}
+
+aside{
+    background-color: var(--bg-borders);
+}
+
+aside .aside-left{
+    grid-area: aside-left;
+}
+
+aside .aside-right{
+    grid-area: aside-right;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+
+}
+
+section{
+    background-color: var(--bg-sections);
+    min-height: 100px;
+    margin: 10px;
+    text-align: left;
+    padding: 10px;
+    border: var(--bdr-sections) solid 2px;
+    border-radius: 10px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--bg-borders);
+}
+
+
+
+
