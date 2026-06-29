@@ -1,11 +1,11 @@
 :root{
     --bg-main: #000022;
-    --bg-borders: #dfb5ff;
+    --bg-borders: #342a3b;
     --bdr-sections: #E28413;
     --bg-sections: #FBF5F3;
     --text-h: #C42847;
     --text-main: #000022;
-    --bg-button: var(--bg-main);
+    --bg-button: #423148;
     --text-button: var(--bg-sections);
 }
 
@@ -54,9 +54,12 @@ header{
 }
 
 nav{
+    display: flex;
     grid-area: nav;
     background-color: var(--bg-borders);
     position: sticky;
+    flex-direction: column;
+    justify-content: left;
     z-index: 1000;
     top: 0;
 }
@@ -64,14 +67,27 @@ nav{
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     list-style: none;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li{
     background-color: var(--bg-button);    
     color: var(--text-button);
+    text-align: center;
     padding: 1rem;
+}
+
+nav .hamBurg{
+    font-size: large;
+    line-height: 10px;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 10px;
 }
 
 aside{
