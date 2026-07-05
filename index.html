@@ -7,45 +7,55 @@
     <link rel="stylesheet" href="css/styles.css"/>
 	<script src="scripts/script.js"></script>
 </head>
-<body>
-	<header>
-		<h1>I.M.D.B Portfolio</h1>
+<body>	
+    <header>
+	<h1>I.M.D.B Portfolio</h1>
     </header>
     <nav>
-        <button id="hamBurg" class="hamBurg" ></button>
+	    <button id="hamBurg" class="hamBurg" ><img src="images/burger-hamburger-menu-svgrepo-com.svg" alt="hambuger as a hambuger menu" width=50/></button>
         <ul>
-            <li><a>Home</a></li>
-            <li><a>About Isaac</a></li>
-            <li><a>Skills</a></li>
-            <li><a>Projects</a></li>
-            <li><a>Education</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
     
 	<main>
 		<section class="home" id="home">
-            <h3>Home</h3>
-			<section class="home_tile" id="home_tile">
-				<h2>Not sure what should be here.. yet</h2>
+            <h3>Isaac: An backend JAVA dev in training</h3>
+			<section class="content_tile" id="home_tile">
+				<p>Some words about me and how i like to do some stuff and things</p>
 			</section>
+			<img src="images/self.jpg" alt="image of the site developer">
         </section>
 
         <section class="about" id="about">
-            <h3>About Isaac</h3>
-			<section class="content_tile" id="about_tile">
-				<h2></h2>
+			<section class="content_tile" id="about_tile_1">
+				<h4>Where im from</h4>
+				<p>Starting my working life as a electricain,<br>then move into land scaping and so on.......</p>
+			</section>
+			<section class="content_tile" id="about_tile_2">
+				<h4>Where im going</h4>
+				<p>I am moving into software engeering, <br>currently working on my dgreee and building portfolio peaces.....</p>
 			</section>
         </section>
         
         <section class="skills" id="skills">
-            <h3>Skills</h3>
-			<section class="content_tile" id="skill_tile"></section>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </section>
+			<h3>Skills</h3>
+			<img src="" alt="git">
+			<img src="" alt="JAVA">
+			<img src="" alt="SpringBoot">
+			<img src="" alt="Unity">
+			<img src="" alt=".NET">
+			<img src="" alt="Python">
+			<img src="" alt="PHP">
+			<img src="" alt="AWS">
+			<img src="" alt="AGLIE">
+		</section>
+
         <section class="projects" id="projects">
             <h3>projects</h3>
 			<section class="content_tile" id="project_tile"></section>
@@ -55,7 +65,7 @@
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </section>
 
-        <section class="edu" id="edu">
+        <section class="education" id="education">
             <h3>Education</h3>
 			<section class="content_tile" id="edu_tile"></section>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -65,12 +75,24 @@
         </section>
         
         <section class="contact" id="contact">
-            <h3>Contact Info</h3>
-			<section class="content_tile" id="contact_tile"></section>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <h3>Get In Contact</h3>
+				<h4>You call me</h4>
+				<ul>
+					<li>Phone:: 0431500233</li>
+					<li>Email:: isaac.brown154@outlook.com</li>
+				</ul>
+			<h4>OR ill call you</h4>
+			<form autocomplete="on">
+				<h4></h4>
+				<label for="name">Name</label><input id="name" name="name" type="text" placeholder="Enter Your Name" required autocomplete="given-name">
+				<label for="comp">Company</label><input id="company" name"comp" type="text" placeholder="Enter Your Company Name" autocomplete="off">
+				<label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="Phone" required autocomplete="tel">
+				<label for="email">Email</label><input id="email" name="email" type="email" placeholder="Email" required autocomplete="email">
+				<label for="message">What you want to say</label><textarea id="message" name="message" rows=5 required></textarea>
+				<button id="contact_submit" name="contact_submit_button">Send Message</button>
+
+			</form>
+            
         </section>
         <section>
             <h3>Cheese Burger</h3>
