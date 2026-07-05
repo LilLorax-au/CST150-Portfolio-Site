@@ -1,3 +1,7 @@
+*{
+	padding: 0;
+	margin: 0;
+}
 :root{
     --bg-main: #000022;
     --bg-borders: #342a3b;
@@ -21,7 +25,8 @@
 }
 
 body{
-    background-color: var(--bg-main);
+    position: relative;
+	background-color: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -35,7 +40,7 @@ body{
     ;
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: auto auto 2fr auto;
-    height: 100vh;
+    height: 100%;
 }
 
 h1, h2, h3, h4{
@@ -89,6 +94,7 @@ nav .hamBurg{
     padding: 1rem;
     margin: 0;
     border-radius: 10px;
+	width: 
 }
 
 aside{
@@ -97,17 +103,29 @@ aside{
 
 aside.aside-left{
     grid-area: aside-left;
-		position: relative;
+	position: relative;
+}
+
+.backplateContainer{
+    background-color: var(--bg-main);
+	position: relative;
+	z-index: -1;
+	display: block;
+    top: 0;
+	bottom: 0;
+	left: 0;
+    width: 100%;
 }
 
 .coding_graphic{
-		position: absolute;
-		z-index: 1;
-		overflow: hidden;
-		margin: auto 0;
-		animation: 
-				typing 3.5s steps(30, end) infinite;
-		
+    color: green;
+	height: 100%;
+    float:inline-start;
+    overflow: hidden;
+	margin: auto 0;
+	/*animation: 
+		typing 3.5s steps(30, end) infinite;
+	*/
 }
 
 @keyframes typing {
@@ -115,17 +133,17 @@ aside.aside-left{
 		to {width: 100%}
 }
 
-aside .inner-aside-left{
+/*.glass_pane{
 		position: absolute; 
-		z-index: 2;
+		z-index: -1;
 		width: 100%;
 		height: 100%;
 		white-space: nowrap;
-		backdrop-filter: blur(12px);
+		backdrop-filter: blur(1px);
 		background-color: rgba(255,255,255,0.25);
 }
-
-aside .aside-right{
+*/
+aside.aside-right{
     grid-area: aside-right;
 }
 
@@ -141,13 +159,21 @@ main{
 }
 
 section{
-    background-color: var(--bg-sections);
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg-sections);
     min-height: 100px;
     margin: 10px;
     text-align: left;
     padding: 10px;
     border: var(--bdr-sections) solid 2px;
     border-radius: 10px;
+}
+
+.content_tile{
+	width: 30%;
 }
 
 footer{
@@ -157,4 +183,7 @@ footer{
 
 
 
-
+	for(let i = 0; i >= 50; i++){
+		coddingBackground.innerHTML += javaCodeSnip + "&emsp;".repeat(i);
+	
+	}
