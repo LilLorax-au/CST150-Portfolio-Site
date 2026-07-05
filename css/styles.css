@@ -295,6 +295,36 @@ section{
 	border-radius:30px;
 }
 
+.projects{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.projects .content_tile{
+	display: grid;
+	grid-template-areas:
+	"title img"
+	"content img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.projects .content_tile .h4{
+	grid-area: title;
+}
+
+.projects img{
+	grid-area: img;
+	height: 100%;
+}
+
+.project p{
+	grid-area: content;
+}
+
 .contact{
 	display: flex;
 	flex-direction: column;

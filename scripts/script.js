@@ -2,7 +2,7 @@ function main(){
 	
 	const ulHandler = document.querySelector('nav ul');
 	const hamToggler = document.getElementById('hamBurg');
-	const contactForm = document.querySelector('form');
+	const contactForm = document.querySelector('.contact form');
 
 	document.querySelectorAll('nav a').forEach(anchor => {
 		anchor.addEventListener('click', (e) => {
@@ -41,8 +41,15 @@ function main(){
 		});
 	});
 
-	contactForm.addEventListener("sbumit", (e) =>{
-		alert("didnt fuck up")
+	contactForm.addEventListener("submit", (e) =>{
+		
+		if(!validateStringInput(contactForm)){
+			e.preventDefault();
+		}
+		else{
+			alert("Thanks " + contactForm.querySelector('input').value + " I'll be in contact<3")
+		}
+
 	})
 
 	function validateStringInput(form){
